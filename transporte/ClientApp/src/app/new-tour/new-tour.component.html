@@ -1,0 +1,40 @@
+
+<mat-card>
+  <mat-card-subtitle>Nueva Gira</mat-card-subtitle>
+  <form [formGroup]="firstFormGroup">  
+  <mat-horizontal-stepper [linear]="isLinear" labelPosition="bottom"  formArrayName="formArray" #stepper>
+    <mat-step formGroupName="0" [stepControl]="formArray?.get([0])" label="Fechas">   
+            <mat-form-field appearance="outline" class="mat-typography">
+                <mat-label>Seleccione un rango</mat-label>
+                <mat-date-range-input  [rangePicker]="picker">
+                  <input matInput matStartDate placeholder="Fecha Inicio" formControlName="firstCtrl" >
+                  <input matInput matEndDate placeholder="Fecha Fin" formControlName="firstCtrl" >
+                </mat-date-range-input>
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-date-range-picker #picker></mat-date-range-picker>               
+            </mat-form-field>             
+            <div>
+              <button mat-flat-button color="primary" matStepperNext type="button">Siguiente</button>
+            </div>     
+    </mat-step>
+    <mat-step formGroupName="1" [stepControl]="formArray?.get([1])" label="Fill out your address">     
+        <mat-form-field appearance="outline">
+          <mat-label>Address</mat-label>
+          <input matInput formControlName="secondCtrl" placeholder="Ex. 1 Main St, New York, NY" required>
+        </mat-form-field>
+        <div>
+          <button mat-flat-button color="primary" matStepperPrevious type="button">Atras</button>
+          <button mat-flat-button color="primary" matStepperNext type="button">Siguiente</button>
+        </div>
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>Done</ng-template>
+      <p>You are now done.</p>
+      <div>
+        <button mat-flat-button color="primary" matStepperPrevious>Back</button>
+        <button mat-flat-button color="primary" (click)="stepper.reset()">Reset</button>
+      </div>
+    </mat-step>
+  </mat-horizontal-stepper>
+</form>
+  </mat-card>
