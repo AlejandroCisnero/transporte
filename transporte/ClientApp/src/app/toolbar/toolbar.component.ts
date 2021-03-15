@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { MatSidenav } from '@angular/material/sidenav';
 
 @Component({
   selector: 'app-toolbar',
@@ -9,8 +10,7 @@ export class ToolbarComponent implements OnInit {
 
   constructor() { }
 
-  drawer;
+
   ngOnInit(): void {
   }
-
 }
