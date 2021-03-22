@@ -15,8 +15,10 @@
                (cdkObserveContent)="drawer.toggle()">
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item routerLink="home" (click)="drawer.toggle()">Inicio</a>
-      <a mat-list-item routerLink="newTour" (click)="drawer.toggle()">Nueva Gira</a>      
+      <a mat-list-item routerLink="home" (click)="drawer.toggle()"><img src="../../assets/icons/round_home_black_24dp.png">Inicio</a>
+      <a mat-list-item routerLink="newTour" (click)="drawer.toggle()"><img src="../../assets/icons/round_add_black_24dp.png">Nueva Gira</a>      
+      <a mat-list-item routerLink="/#" (click)="drawer.toggle()"><img src="../../assets/icons/round_view_list_black_24dp.png">Giras</a>      
+
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
