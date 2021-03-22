@@ -4,10 +4,28 @@
   
   .mat-form-field {
     margin-top: 16px;
+    margin-left: 30px;
   }
   mat-card{
     margin: 1em;
   }
+  .mat-card-container{
+    
+  }
   button{
     margin-right: 0.5em;
+  }
+  .nextButton{
+    clear: both;
+  }
+  .dateCard{
+   width: 35%;
+   float: left;
+  }
+  .locationCard{
+    width: 60%; 
+    float: right;
+  }
+  .mat-card-inside{
+    margin: 2px;
   }
