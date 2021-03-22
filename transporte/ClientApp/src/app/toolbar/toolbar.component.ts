@@ -1,5 +1,8 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { MainNavComponent } from '../main-nav/main-nav.component';
+import { Component, OnInit } from '@angular/core';
+
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { Observable } from 'rxjs';
+import { map, shareReplay } from 'rxjs/operators';
 
 @Component({
   selector: 'app-toolbar',
@@ -8,13 +11,21 @@ import { MainNavComponent } from '../main-nav/main-nav.component';
 })
 export class ToolbarComponent implements OnInit {
 
-  constructor(public MainNavComponent: MainNavComponent) { }
+  events: string[] = [];
+  opened: boolean;
+
+  isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
+    .pipe(
+      map(result => result.matches),
+      shareReplay()
+    );
+
+  constructor(private breakpointObserver: BreakpointObserver) { }
+
+
 
 
   ngOnInit(): void {
   }
 
-  open(){
-    this.MainNavComponent.opened=true;
-  }
 }

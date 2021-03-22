@@ -21,18 +21,18 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import { MatNativeDateModule, MAT_DATE_LOCALE } from '@angular/material/core';
 import { NewTourComponent } from './new-tour/new-tour.component';
 import { STEPPER_GLOBAL_OPTIONS } from '@angular/cdk/stepper';
-import { MainNavComponent } from './main-nav/main-nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatListModule } from '@angular/material/list';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { FormsModule } from '@angular/forms';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NewTourComponent,
-    MainNavComponent,
     ToolbarComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
