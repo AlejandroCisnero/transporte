@@ -25,13 +25,14 @@ import { MainNavComponent } from './main-nav/main-nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatListModule } from '@angular/material/list';
 import { ToolbarComponent } from './toolbar/toolbar.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     NewTourComponent,
     MainNavComponent,
-    ToolbarComponent
+    ToolbarComponent,
   ],
   imports: [
     BrowserModule,
@@ -53,7 +54,8 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
     HttpClientModule,
     MatSidenavModule,
     LayoutModule,
-    MatListModule
+    MatListModule,
+    FormsModule
   ],
   providers: [
     {provide: MAT_DATE_LOCALE, useValue: 'es-NI'},

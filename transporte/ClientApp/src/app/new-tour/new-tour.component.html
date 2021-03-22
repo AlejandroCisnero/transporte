@@ -20,7 +20,7 @@
     <mat-step formGroupName="1" [stepControl]="formArray?.get([1])" label="Fill out your address">     
         <mat-form-field appearance="outline">
           <mat-label>Address</mat-label>
-          <input matInput formControlName="secondCtrl" placeholder="Ex. 1 Main St, New York, NY" required>
+          <input matInput [(ngModel)]="nombre" formControlName="secondCtrl" placeholder="Ex. 1 Main St, New York, NY" required>
         </mat-form-field>
         <div>
           <button mat-flat-button color="primary" matStepperPrevious type="button">Atras</button>

@@ -11,6 +11,7 @@ export class NewTourComponent implements OnInit {
   firstFormGroup: FormGroup;
   isLinear = true;
   isEditable = false;
+  nombre = "Alejandro";
 
   get formArray(): AbstractControl | null { 
     return this.firstFormGroup.get('formArray');
