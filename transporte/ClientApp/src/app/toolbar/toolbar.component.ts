@@ -21,10 +21,7 @@ export class ToolbarComponent implements OnInit {
     );
 
   constructor(private breakpointObserver: BreakpointObserver) { }
-
-
-
-
+  panelOpenState = false;
   ngOnInit(): void {
   }
 

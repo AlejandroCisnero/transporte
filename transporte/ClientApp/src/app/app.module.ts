@@ -17,6 +17,8 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
 import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatExpansionModule} from '@angular/material/expansion';
+import {MatMenuModule} from '@angular/material/menu';
 
 import { MatNativeDateModule, MAT_DATE_LOCALE } from '@angular/material/core';
 import { NewTourComponent } from './new-tour/new-tour.component';
@@ -38,6 +40,7 @@ import { HomeComponent } from './home/home.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    MatMenuModule,
     MatToolbarModule,
     MatDatepickerModule,
     MatFormFieldModule,
@@ -47,6 +50,7 @@ import { HomeComponent } from './home/home.component';
     ReactiveFormsModule,
     MatIconModule,
     MatInputModule,
+    MatExpansionModule,
     MatButtonModule,
     RouterModule.forRoot([
       { path: 'nueva-solicitud', component: NewTourComponent }
