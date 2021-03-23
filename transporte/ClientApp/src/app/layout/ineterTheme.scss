@@ -77,11 +77,15 @@ $ClientApp-theme: mat-light-theme($ClientApp-primary,$ClientApp-accent,$ClientAp
 html, body { height: 100%; }
 body {
      margin: 0;
+     min-width: 700px;
 }
 img{
     margin-right: 0.5em;      
 }
 button{
   background-color: #15a80e;
+}
+.mat-expansion-panel-body {
+  padding: 0px 24px !important;
 }
 

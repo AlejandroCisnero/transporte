@@ -8,7 +8,7 @@
         <div class="dateCard mat-card-inside">
           <mat-card >
             <mat-card-subtitle>Fechas</mat-card-subtitle>
-            <mat-form-field appearance="outline" class="mat-typography">
+            <mat-form-field appearance="outline" class="mat-typography" id="dataPicker">
               <mat-label>Seleccione un rango</mat-label>
               <mat-date-range-input  [rangePicker]="picker">
                 <input matInput matStartDate placeholder="Fecha Inicio" formControlName="firstCtrl" >
@@ -20,7 +20,7 @@
           </mat-card>
         </div>
         <div class="locationCard mat-card-inside">
-          <mat-card >
+          <mat-card>
               <mat-card-subtitle>Ubicaciones</mat-card-subtitle>
           </mat-card>            
       </div>      
