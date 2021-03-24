@@ -16,7 +16,7 @@
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
       <a mat-list-item routerLink="home" (click)="drawer.toggle()"><img src="../../assets/icons/round_home_black_24dp.png">Inicio</a>
-      <mat-expansion-panel mat-list-item (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+      <mat-expansion-panel #expansionPanel mat-list-item (opened)="panelOpenState = true" (closed)="panelOpenState = false">
         <mat-expansion-panel-header>  
           <mat-panel-title >
             <img src="../../assets/icons/baseline_tour_black_24dp.png">Gira

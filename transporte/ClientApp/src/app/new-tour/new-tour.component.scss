@@ -6,33 +6,6 @@
     min-width: 35%;
   }
   mat-card{
-    margin: 1em;
     box-shadow: none !important;
     border: 1px solid rgba(0, 0, 0, 0.54);
-  }
-
-  button{
-    margin-right: 0.5em;
-  }
-  .nextButton{
-    clear: both;
-    margin-left: 1em;
-  }
-  .dateCard{
-   width: 35%;
-   height: 60%;
-   float: left;
-   margin-right: 2px;
-  }
-  .locationCard{
-    width: 60%; 
-    float: right;
-  }
-  .mat-card-inside{
-    margin: 2px;
-  }
-  #dataPicker{
-    margin-left: 9.5%;
-    width: 80%;
-    min-width: 35%;
   }

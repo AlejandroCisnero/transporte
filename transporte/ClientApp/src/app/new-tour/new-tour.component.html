@@ -4,9 +4,7 @@
   <form [formGroup]="firstFormGroup">  
   <mat-horizontal-stepper [linear]="isLinear" labelPosition="bottom"  formArrayName="formArray" #stepper>
     <mat-step formGroupName="0" [stepControl]="formArray?.get([0])" label="Gira">  
-      <div class="mat-card-container">
-        <div class="dateCard mat-card-inside">
-          <mat-card >
+          <mat-card>
             <mat-card-subtitle>Fechas</mat-card-subtitle>
             <mat-form-field appearance="outline" class="mat-typography" id="dataPicker">
               <mat-label>Seleccione un rango</mat-label>
@@ -17,27 +15,23 @@
               <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
               <mat-date-range-picker #picker></mat-date-range-picker>               
           </mat-form-field> 
-          </mat-card>
-        </div>
-        <div class="locationCard mat-card-inside">
-          <mat-card>
-              <mat-card-subtitle>Ubicaciones</mat-card-subtitle>
-          </mat-card>            
-      </div>      
-    </div>  
-    <div class="nextButton">
-      <button mat-flat-button color="primary"  matStepperNext type="button">Siguiente</button>
-    </div>   
+          </mat-card>        
+          <mat-card id="locationMatCard">
+            <mat-card-subtitle>Ubicaciones</mat-card-subtitle>            
+                <div id="map" class="map" #map>
+                  <app-map>
+                  </app-map>
+                </div>
+        </mat-card>            
+      <button id="firstStepButton" mat-flat-button color="primary"  matStepperNext type="button">Siguiente</button>
     </mat-step>
     <mat-step formGroupName="1" [stepControl]="formArray?.get([1])" label="Participantes">     
         <mat-form-field appearance="outline">
           <mat-label>Address</mat-label>
           <input matInput [(ngModel)]="nombre" formControlName="secondCtrl" placeholder="Ex. 1 Main St, New York, NY" required>
         </mat-form-field>
-        <div>
           <button mat-flat-button color="primary" matStepperPrevious type="button">Atras</button>
           <button mat-flat-button color="primary" matStepperNext type="button">Siguiente</button>
-        </div>
     </mat-step>
     <mat-step label="Finalizado">       
       <p>You are now done.</p>

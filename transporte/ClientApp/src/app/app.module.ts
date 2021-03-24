@@ -28,6 +28,22 @@ import { MatListModule } from '@angular/material/list';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
+import {icon, Marker} from 'leaflet';
+import { MapComponent } from './map/map.component';
+
+const iconRetinaUrl = 'assets/leaflet/marker-icon-2x.png';
+const iconUrl = 'assets/leaflet/marker-icon.png';
+const shadowUrl = 'assets/leaflet/marker-shadow.png';
+const iconDefault = icon({
+  iconRetinaUrl,
+  iconUrl,
+  shadowUrl,
+  iconSize: [25, 41],
+  iconAnchor: [12, 41],
+  popupAnchor: [1, -34],
+  tooltipAnchor: [16, -28],
+  shadowSize: [41, 41]
+});
 
 @NgModule({
   declarations: [
@@ -35,6 +51,7 @@ import { HomeComponent } from './home/home.component';
     NewTourComponent,
     ToolbarComponent,
     HomeComponent,
+    MapComponent,
   ],
   imports: [
     BrowserModule,
@@ -52,9 +69,7 @@ import { HomeComponent } from './home/home.component';
     MatInputModule,
     MatExpansionModule,
     MatButtonModule,
-    RouterModule.forRoot([
-      { path: 'nueva-solicitud', component: NewTourComponent }
-    ]),
+    RouterModule.forRoot([]),
     HttpClientModule,
     MatSidenavModule,
     LayoutModule,

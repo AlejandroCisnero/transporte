@@ -1,4 +1,3 @@
-import { group } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
 import {AbstractControl, FormBuilder, FormGroup, Validators} from '@angular/forms';
 
@@ -12,13 +11,15 @@ export class NewTourComponent implements OnInit {
   isLinear = true;
   isEditable = false;
   nombre = "Alejandro";
+  
 
   get formArray(): AbstractControl | null { 
     return this.firstFormGroup.get('formArray');
   }
   constructor(private _formBuilder: FormBuilder) {}
 
-  ngOnInit() {
+  ngOnInit() {    
+
     this.firstFormGroup = this._formBuilder.group({
       formArray: this._formBuilder.array([
         this._formBuilder.group({
@@ -29,6 +30,8 @@ export class NewTourComponent implements OnInit {
         })
       ])
     });
+
+    
   }
 
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MapComponent } from '../map/map.component';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+  mapa: MapComponent;
   constructor() { }
 
   ngOnInit(): void {
+
   }
 
 }
