@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
 import * as L from 'leaflet';
 import { antPath } from 'leaflet-ant-path';
 
@@ -7,16 +7,16 @@ import { antPath } from 'leaflet-ant-path';
   templateUrl: './map.component.html',
   styleUrls: ['./map.component.scss']
 })
-export class MapComponent implements OnInit {
+export class MapComponent implements AfterViewInit {
 
   name='Angular';
   map:any;
 
   constructor() { }
 
-  ngOnInit() {
+  ngAfterViewInit() {
 
-    this.map = L.map('map').setView([43.068661, 141.350755], 8);
+    this.map = L.map('map').setView([12.735666, -85.039201], 6);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(this.map);
