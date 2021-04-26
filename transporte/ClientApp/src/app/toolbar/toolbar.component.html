@@ -1,5 +1,5 @@
 <mat-toolbar color="primary">
-  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" (click)="drawer.toggle()">
+  <button mat-icon-button (click)="drawer.toggle()">
     <mat-icon>menu</mat-icon>
   </button>
   <img src="/../assets/ineter-logo.png" height="55" width="55">
@@ -8,15 +8,12 @@
   </button>
 </mat-toolbar>
 
-<mat-sidenav-container>
-  <mat-sidenav #drawer [(opened)]="opened" class="sidenav"
-               [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
-               [mode]="(isHandset$ | async) ? 'over' : 'push'"
-               (cdkObserveContent)="drawer.toggle()">
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer [(opened)]="opened" class="sidenav" mode="over">
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
       <a mat-list-item routerLink="home" (click)="drawer.toggle()"><img src="../../assets/icons/round_home_black_24dp.png">Inicio</a>
-      <mat-expansion-panel #expansionPanel mat-list-item (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+      <mat-expansion-panel #expansionPanel mat-list-item>
         <mat-expansion-panel-header>  
           <mat-panel-title >
             <img src="../../assets/icons/baseline_tour_black_24dp.png">Gira
